@@ -7,7 +7,8 @@ Assignments:
 * Tank: Ryan
 * Child: Owen
 * Teacher: Saad
-* Soldier: Carlos
+* Soldier: Carlos;
+
 And then, due to a large group, the rest should make up classes from Left4Dead (ie witch, boomer, smoker, charger, etc.).
 source: http://left4dead.wikia.com/wiki/The_Special_Infected
 
