@@ -1,7 +1,7 @@
 # Zombie Program (Java, gr 2)
 
 Assignments:
-* Release 1.0: Charlie
+* Release 1.0 & Factory: Charlie
 * Release 2.0: Ben
 * Common Infected: Cody
 * Tank: Ryan
