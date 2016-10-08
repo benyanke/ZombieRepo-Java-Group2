@@ -17,11 +17,12 @@ public class Main {
     int numZombies = (int) (Math.random() * 10);
     IZombie[] zombies = new IZombie[numZombies];
     for (int i = 0; i < zombies.length; i++) {
-      int zombieType = (int) (Math.random() * 2);
+      int zombieType = (int) (Math.random() * 3);
       switch(zombieType){
         case 0: zombies[i] = (IZombie) factory.make("common"); break;
         case 1: zombies[i] = (IZombie) factory.make("tank"); break;
         case 2: zombies[i] = (IZombie) factory.make("predator"); break;
+        case 3: zombies[i] = (IZombie) factory.make("charger"); break;
       }
     }
     return zombies;
