@@ -1,6 +1,6 @@
 # Zombie Program (Java, gr 2)
 
-_Note: projectSheet.pdf is a scan of the original assignment handed out in class_
+_Note: [projectSheet.pdf](https://github.com/benyanke/ZombieRepo-Java-Group2/blob/master/projectSheet.pdf) is a scan of the original assignment handed out in class_
 
 Assignments:
 * Release 1.0 & Factory: Charlie
