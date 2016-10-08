@@ -1,5 +1,7 @@
 # Zombie Program (Java, gr 2)
 
+_Note: projectSheet.pdf is a scan of the original assignment handed out in class_
+
 Assignments:
 * Release 1.0 & Factory: Charlie
 * Release 2.0: Ben
