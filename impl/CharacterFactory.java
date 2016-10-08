@@ -29,6 +29,7 @@ public class CharacterFactory implements ICharacterFactory{
     switch(type){
       case "soldier"  : return new Soldier();
       case "tank"     : return new Tank();
+      case "charger"  : return new Charger();
     }
     return null;
   }
