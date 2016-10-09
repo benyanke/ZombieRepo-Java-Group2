@@ -19,10 +19,20 @@ public class Main {
     for (int i = 0; i < zombies.length; i++) {
       int zombieType = (int) (Math.random() * 3);
       switch(zombieType){
-        case 0: zombies[i] = (IZombie) factory.make("common"); break;
-        case 1: zombies[i] = (IZombie) factory.make("tank"); break;
-        case 2: zombies[i] = (IZombie) factory.make("predator"); break;
-        case 3: zombies[i] = (IZombie) factory.make("charger"); break;
+      
+// Temp code to allow things to compile
+      	case 0: zombies[i] = (IZombie) factory.make("charger"); break;
+	    case 1: zombies[i] = (IZombie) factory.make("charger"); break;
+	    case 2: zombies[i] = (IZombie) factory.make("charger"); break;
+	    case 3: zombies[i] = (IZombie) factory.make("charger"); break;
+	      
+// Original code 
+	      /*
+	      case 0: zombies[i] = (IZombie) factory.make("common"); break;
+	      case 1: zombies[i] = (IZombie) factory.make("tank"); break;
+	      case 2: zombies[i] = (IZombie) factory.make("predator"); break;
+	      case 3: zombies[i] = (IZombie) factory.make("charger"); break;
+	      */
       }
     }
     return zombies;
@@ -34,10 +44,20 @@ public class Main {
     for (int i = 0; i < survivors.length; i++) {
       int type = (int) (Math.random() * 3);
       switch(type){
-        case 0: survivors[i] = (ISurvivor) factory.make("solider"); break;
-        case 1: survivors[i] = (ISurvivor) factory.make("teacher"); break;
-        case 2: survivors[i] = (ISurvivor) factory.make("student"); break;
-        case 3: survivors[i] = (ISurvivor) factory.make("child"); break;
+// Temp code to allow things to compile      
+	      case 0: survivors[i] = (ISurvivor) factory.make("solider"); break;
+	      case 1: survivors[i] = (ISurvivor) factory.make("solider"); break;
+	      case 2: survivors[i] = (ISurvivor) factory.make("solider"); break;
+	      case 3: survivors[i] = (ISurvivor) factory.make("solider"); break;
+	
+	      
+/*
+	      case 0: survivors[i] = (ISurvivor) factory.make("solider"); break;
+	      case 1: survivors[i] = (ISurvivor) factory.make("teacher"); break;
+	      case 2: survivors[i] = (ISurvivor) factory.make("student"); break;
+	      case 3: survivors[i] = (ISurvivor) factory.make("child"); break;
+*/
+
       }
     }
     return survivors;
@@ -62,13 +82,24 @@ public class Main {
     System.out.println("We have " + survivors.length + " survivors trying to make it to safety.");
     System.out.println("But there are " + zombies.length + " zombies waiting for them.");
     
+   
     //TODO: the survivors attack first.  One characte attack each zombie.
     //      When all the survivors have done attacking, it's the zombies' 
     //      turn to attack.  For each zombie that is still alive, attack
     //      each suvivor that is still alive.  Repeat this cycle until
     //      all the zombies are all dead or all the survivors are all dead.
+ 
     
-
+    // Temp test attack
+//    zombies[0].attack(survivors[0]);
+//    survivors[0].attack(zombies[0]);
+  
+    
+    System.out.println("Zombies: ");
+    dumpArray(zombies);
+    
+    System.out.println("Survivors: ");
+    dumpArray(survivors);
     
 
     if (allDead(survivors)) {
@@ -82,4 +113,13 @@ public class Main {
     }
   }
 
+  
+
+  // Debugging method to view array contents
+	public static void dumpArray(Object[] input) {
+		for (int i = 0; i < input.length; i++) {
+			System.out.println("\t" + input[i]);
+		}
+		System.out.println("################");
+	}
 }

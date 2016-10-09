@@ -17,4 +17,11 @@ public class Soldier extends Character implements ISurvivor {
 		zombie.decreaseHealth(attackDamage);
 	}
 	
+	// Added by Ben Yanke for debugging purposes
+	@Override
+	public String toString() {
+		return "SOLDIER | Health=" + health;
+	}
+	
+	
 } //end class

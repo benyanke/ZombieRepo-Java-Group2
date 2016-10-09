@@ -8,8 +8,9 @@ import intf.IZombie;
 public class Charger extends Character implements IZombie {
 	
 	Charger() {
-		int health = 80;
-		super(health);
+		super(80);
+//		int health = 80;
+//		super(health);
 	}
 
 	@Override
@@ -20,5 +21,12 @@ public class Charger extends Character implements IZombie {
 		else //But unlucky number 13 gets slammed into the wall repeatedly
 			target.decreaseHealth(75);
 	}
+	
+	// Added by Ben Yanke for debugging purposes
+	@Override
+	public String toString() {
+		return "CHARGER | Health=" + health;
+	}
+	
 	
 } //end class
