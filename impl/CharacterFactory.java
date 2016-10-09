@@ -28,18 +28,6 @@ public class CharacterFactory implements ICharacterFactory{
   // Temp method to allow to compile
   @Override
   public ICharacter make(String type) {
-    switch(type){
-      case "soldier"  : return new Charger();
-      case "tank"     : return new Charger();
-      case "charger"  : return new Charger();
-      case "common"  : return new Charger();
-    }
-    return null;
-  }
-  
-  // Original code
-  /*
-  public ICharacter make(String type) {
 	    switch(type){
 	      case "soldier"  : return new Soldier();
 	      case "tank"     : return new Tank();
@@ -48,5 +36,5 @@ public class CharacterFactory implements ICharacterFactory{
 	    }
 	    return null;
 	  }
-   */
+   
 }

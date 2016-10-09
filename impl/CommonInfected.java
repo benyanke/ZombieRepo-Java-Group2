@@ -14,5 +14,11 @@ public class CommonInfected extends Character implements IZombie {
     public void attack(ISurvivor target) {
         target.decreaseHealth(5);
     }
+    
+	// Added by Ben Yanke for debugging purposes
+	@Override
+	public String toString() {
+		return "CommonInfected | Health=" + health;
+	}
 
 }
