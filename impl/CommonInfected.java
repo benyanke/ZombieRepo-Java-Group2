@@ -5,7 +5,7 @@ import intf.IZombie;
 
 public class CommonInfected extends Character implements IZombie {
 
-    Charger() {
+    CommonInfected() {
         int health = 30;
         super(health);
     }
