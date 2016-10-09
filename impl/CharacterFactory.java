@@ -30,6 +30,7 @@ public class CharacterFactory implements ICharacterFactory{
       case "soldier"  : return new Soldier();
       case "tank"     : return new Tank();
       case "charger"  : return new Charger();
+      case "common"  : return new CommonInfected();
     }
     return null;
   }
