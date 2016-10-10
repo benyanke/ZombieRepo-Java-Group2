@@ -129,6 +129,24 @@ public class Main {
 		     
 		return output.substring(0, output.length() - 2);
 	}
+	
+	//Performs all of the zombie attacks
+	public static void zombiesAttack(IZombie zombies[], ISurvivor[]survivors){
+		for(int i = 0; i<survivors.length&&survivors[i].isAlive(); i++){		
+			for(int z = 0; z< zombies.length&&zombies[z].isAlive(); z++){
+				zombies[z].attack(survivors[i]);
+			}
+		}
+	}
+
+	//Performs all of the survivor attacks
+	public static void survivorsAttack(ISurvivor[]survivors, IZombie zombies[]){
+		for(int z = 0; z<zombies.length&&zombies[z].isAlive(); z++){
+			for(int i = 0; i< survivors.length&&survivors[i].isAlive(); i++){
+				survivors[i].attack(zombies[z]);
+			}
+		}
+	}
 
 
 	/**
@@ -155,7 +173,12 @@ public class Main {
 			// turn to attack. For each zombie that is still alive, attack
 			// each suvivor that is still alive. Repeat this cycle until
 			// all the zombies are all dead or all the survivors are all dead.
-			
+			while(!allDead(zombies) && !allDead(survivors)){
+				survivorsAttack(survivors, zombies);
+				if(allDead(zombies)){break;}
+				zombiesAttack(zombies, survivors);
+				if(allDead(survivors)){break;}
+			}
 
 			
 			// Temp test attack
