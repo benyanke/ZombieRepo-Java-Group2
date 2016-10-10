@@ -22,6 +22,7 @@ public class Main {
 
 	public static IZombie[] randomZombies() {
 		int numZombies = (int) (Math.random() * 10);
+		if(numZombies == 0)numZombies = 1;
 		IZombie[] zombies = new IZombie[numZombies];
 		for (int i = 0; i < zombies.length; i++) {
 			int zombieType = (int) (Math.random() * 3);
@@ -48,6 +49,7 @@ public class Main {
 
 	public static ISurvivor[] randomSurvivors() {
 		int numSurvivor = (int) (Math.random() * 20);
+		if(numSurvivors == 0)numSurvivors = 1;
 		ISurvivor[] survivors = new ISurvivor[numSurvivor];
 		for (int i = 0; i < survivors.length; i++) {
 			int type = (int) (Math.random() * 3);
