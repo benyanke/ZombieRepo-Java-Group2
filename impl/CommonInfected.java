@@ -4,9 +4,8 @@ import intf.ISurvivor;
 import intf.IZombie;
 
 public class CommonInfected extends Character implements IZombie {
-
+    static int health = 30;
     CommonInfected() {
-        int health = 30;
         super(health);
     }
 
