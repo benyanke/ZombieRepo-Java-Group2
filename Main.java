@@ -132,18 +132,22 @@ public class Main {
 	
 	//Performs all of the zombie attacks
 	public static void zombiesAttack(IZombie zombies[], ISurvivor[]survivors){
-		for(int i = 0; i<survivors.length&&survivors[i].isAlive(); i++){		
-			for(int z = 0; z< zombies.length&&zombies[z].isAlive(); z++){
-				zombies[z].attack(survivors[i]);
+		for(int i = 0; i<survivors.length; i++){		
+			for(int z = 0; z< zombies.length; z++){
+				if(survivors[i].isAlive()&&zombies[z].isAlive()){
+					zombies[z].attack(survivors[i]);
+				}	
 			}
 		}
 	}
 
 	//Performs all of the survivor attacks
 	public static void survivorsAttack(ISurvivor[]survivors, IZombie zombies[]){
-		for(int z = 0; z<zombies.length&&zombies[z].isAlive(); z++){
-			for(int i = 0; i< survivors.length&&survivors[i].isAlive(); i++){
-				survivors[i].attack(zombies[z]);
+		for(int z = 0; z<zombies.length; z++){
+			for(int i = 0; i< survivors.length; i++){
+				if(survivors[i].isAlive()&&zombies[z].isAlive()){
+					survivors[i].attack(zombies[z]);
+				}	
 			}
 		}
 	}
