@@ -8,9 +8,7 @@ import intf.IZombie;
 public class Charger extends Character implements IZombie {
 	
 	Charger() {
-		super(80);
-//		int health = 80;   //This is declared as a variable for the sake of English Readability
-//		super(health);
+		super(80); //80 refers to health
 	}
 
 	@Override
