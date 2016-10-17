@@ -21,7 +21,7 @@ public abstract class Character implements ICharacter{
 		health-=increment;
 		if(this.health <= 0) {
 			this.health = 0;
-			System.out.println(this1 + " died.");
+			System.out.println(this + " died.");
 		}
 	}
 
