@@ -1,4 +1,4 @@
-package intf;
+package zombiewar.intf;
 
 public interface ICharacterFactory{
  
