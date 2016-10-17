@@ -56,8 +56,7 @@ public class Main {
 		ISurvivor[] survivors = new ISurvivor[numSurvivor];
 		for (int i = 0; i < survivors.length; i++) {
 			int type = (int) (Math.random() * 3);
-			
-			//survivors[i] = (ISurvivor) factory.make("soldier");
+			survivors[i] = (ISurvivor) factory.make("soldier");
 			// Always returns soldier, since no one has written teacher/student/child
 			/*
 			switch (type) {
