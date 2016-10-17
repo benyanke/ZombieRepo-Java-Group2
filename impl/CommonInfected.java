@@ -17,7 +17,8 @@ public class CommonInfected extends Character implements IZombie {
 	// Added by Ben Yanke for debugging purposes
 	@Override
 	public String toString() {
-		return "CommonInfected | Health=" + health;
+	//	return "CommonInfected | Health=" + health;
+		return "CommonInfected";
 	}
 
 }

@@ -30,7 +30,10 @@ public class CharacterFactory implements ICharacterFactory{
   public ICharacter make(String type) {
 	    switch(type){
 	      case "soldier"  : return new Soldier();
-	      case "tank"     : return new Tank();
+	      
+	      // Commenting out tank since it hasn't been written
+	      //case "tank"     : return new Tank();
+	      case "tank"     : return new Soldier();
 	      case "charger"  : return new Charger();
 	      case "common"  : return new CommonInfected();
 	    }

@@ -23,7 +23,8 @@ public class Charger extends Character implements IZombie {
 	// Added by Ben Yanke for debugging purposes
 	@Override
 	public String toString() {
-		return "CHARGER | Health=" + health;
+		//return "CHARGER | Health=" + health;
+		return "Charger";
 	}
 	
 	

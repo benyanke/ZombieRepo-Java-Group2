@@ -7,6 +7,7 @@ public class Soldier extends Character implements ISurvivor {
 	
 	private static int health = 100;
 	private static int attackDamage = 10;
+	public String name = "Soldier";
 
 	Soldier() {
 		super(health);
@@ -20,7 +21,8 @@ public class Soldier extends Character implements ISurvivor {
 	// Added by Ben Yanke for debugging purposes
 	@Override
 	public String toString() {
-		return "SOLDIER | Health=" + health;
+		//return "SOLDIER | Health=" + health;
+		return "Soldier";
 	}
 	
 	

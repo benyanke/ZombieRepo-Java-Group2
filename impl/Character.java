@@ -5,6 +5,7 @@ import intf.ICharacter;
 public abstract class Character implements ICharacter{
 	
 	public int health;
+	public String name = "Character";
 	
 
 	Character(){
@@ -18,6 +19,10 @@ public abstract class Character implements ICharacter{
 	@Override
 	public void decreaseHealth(int increment) {
 		health-=increment;
+		if(this.health <= 0) {
+			this.health = 0;
+			System.out.println(this + " died.");
+		}
 	}
 
 	@Override
@@ -28,7 +33,8 @@ public abstract class Character implements ICharacter{
 	// Added by Ben Yanke for debugging purposes
 	@Override
 	public String toString() {
-		return "CHARACTER | Health=" + health;
+		//return "CHARACTER | Health=" + health;
+		return "Character";
 	}
 	
 }
