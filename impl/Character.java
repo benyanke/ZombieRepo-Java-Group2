@@ -1,40 +1,25 @@
-package impl;
+package zombiewar.impl;
 
-import intf.ICharacter;
+import zombiewar.intf.ICharacter;
+import zombiewar.intf.IZombie;
 
 public abstract class Character implements ICharacter{
 	
 	public int health;
-	public String name = "Character";
+	public int attack;
 	
-
-	Character(){
-		this.health = 100;
-	}
-
-	Character(int health){
+	Character(int health, int attack){
 		this.health = health;
+		this.attack = attack;
 	}
 
 	@Override
 	public void decreaseHealth(int increment) {
 		health-=increment;
-		if(this.health <= 0) {
-			this.health = 0;
-			System.out.println(this + " died.");
-		}
 	}
 
 	@Override
 	public boolean isAlive() {
 		return (health > 0);
 	}
-	
-	// Added by Ben Yanke for debugging purposes
-	@Override
-	public String toString() {
-		//return "CHARACTER | Health=" + health;
-		return "Character";
-	}
-	
 }

@@ -1,43 +1,81 @@
+package zombiewar.impl;
 
-package impl;
+import zombiewar.intf.ICharacter;
+import zombiewar.intf.ICharacterFactory;
 
-import intf.ICharacter;
-import intf.ICharacterFactory;
 /**
- *
+ * 
  * @author thaoc
  */
-public class CharacterFactory implements ICharacterFactory{
-  
-  public static final ICharacterFactory instance = new CharacterFactory();
-  
-  private CharacterFactory(){
-   
-  }
+public class CharacterFactory implements ICharacterFactory {
 
-  /**
-   * Make the character.  To support more characters,
-   * simply implement a type and then add a case statement
-   * to this method.
-   * 
-   * @param type The type of character to make.
-   * @return 
-   */
-  
-  
-  // Temp method to allow to compile
-  @Override
-  public ICharacter make(String type) {
-	    switch(type){
-	      case "soldier"  : return new Soldier();
-	      
-	      // Commenting out tank since it hasn't been written
-	      //case "tank"     : return new Tank();
-	      case "tank"     : return new Soldier();
-	      case "charger"  : return new Charger();
-	      case "common"  : return new CommonInfected();
-	    }
-	    return null;
-	  }
-   
+	public static final ICharacterFactory instance = new CharacterFactory();
+
+	private CharacterFactory() {
+
+	}
+
+	/**
+	 * Make the character. To support more characters, simply implement a type
+	 * and then add a case statement to this method.
+	 * 
+	 * @param type
+	 *            The type of character to make.
+	 * @return
+	 */
+
+	@Override
+	public ICharacter make(String type) {
+
+		if (type.equals("tank")) {
+			return new Tank();
+		}
+
+		if (type.equals("common")) {
+			return new Common();
+		}
+
+		if (type.equals("predator")) {
+			return new Predator();
+		}
+
+		if (type.equals("soldier")) {
+			return new Soldier();
+		}
+
+		if (type.equals("teacher")) {
+			return new Teacher();
+		}
+
+		if (type.equals("student")) {
+			return new Student();
+		}
+
+		if (type.equals("child")) {
+			return new Child();
+		}
+
+		return null;
+
+		// switch (type) {
+		// case "tank":
+		// return new Tank();
+		// case "common":
+		// return new Common();
+		// case "predator":
+		// return new Predator();
+		// case "soldier":
+		// return new Soldier();
+		// case "teacher":
+		// return new Teacher();
+		// case "student":
+		// return new Student();
+		// case "child":
+		// return new Child();
+		// default:
+		// return null;
+		//
+		// }
+	}
+
 }

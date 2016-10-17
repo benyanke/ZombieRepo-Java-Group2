@@ -3,13 +3,13 @@ package zombiewar.impl;
 import zombiewar.intf.ISurvivor;
 import zombiewar.intf.IZombie;
 
-public class Soldier extends Character implements ISurvivor {
+public class Student extends Character implements ISurvivor {
 
-	Soldier(){
-		this(100, 10);
+	Student(){
+		this(40, 3);
 	}
 	
-	Soldier(int health, int attack) {
+	Student(int health, int attack) {
 		super(health, attack);
 	}
 	
