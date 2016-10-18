@@ -1,7 +1,7 @@
 package intf;
 
 
-public class Boomer implements IZombie {
+public class Boomer extends Character implements IZombie {
 
 
 	public int health = 60;
