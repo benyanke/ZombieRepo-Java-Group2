@@ -1,5 +1,8 @@
 package zombiewar.impl;
 
+import intf.ISurvivor;
+import intf.IZombie;
+
 public class Boomer extends Character implements IZombie {
 
 
