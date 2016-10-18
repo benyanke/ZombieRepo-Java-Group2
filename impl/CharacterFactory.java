@@ -55,6 +55,10 @@ public class CharacterFactory implements ICharacterFactory {
 			return new Child();
 		}
 
+		if (type.equals("charger")) {
+			return new Charger();
+		}
+
 		return null;
 
 		// switch (type) {

@@ -21,7 +21,7 @@ public class Main2 {
 		int numZombies = (int) (Math.random() * 10);
 		List<IZombie> zombies = new ArrayList<IZombie>();
 		for (int i = 0; i < numZombies; i++) {
-			int zombieType = (int) (Math.random() * 2);
+			int zombieType = (int) (Math.random() * 3);
 			switch (zombieType) {
 			case 0:
 				zombies.add((IZombie) factory.make("common"));
@@ -32,6 +32,8 @@ public class Main2 {
 			case 2:
 				zombies.add((IZombie) factory.make("predator"));
 				break;
+			case 3:
+				zombies.add((IZombie) factory.make("charger"));
 			}
 		}
 		return zombies;
@@ -130,7 +132,7 @@ public class Main2 {
 				}
 			}
 
-			if (!allDeadS(survivors)) {
+			if (allDeadS(survivors)) {
 				break;
 			}
 		}
