@@ -1,5 +1,4 @@
-package intf;
-
+package zombiewar.impl;
 
 public class Boomer extends Character implements IZombie {
 
