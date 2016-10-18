@@ -1,20 +1,32 @@
 package zombiewar.impl;
+package impl;
 
-import zombiewar.intf.ISurvivor;
-import zombiewar.intf.IZombie;
+import zombiewar.intf.IChararacter;
+import inf.ICharacter;
 
-	public class Teacher extends Character implements ISurvivor {
 
-		Teacher(){
-			this(50, 2);
-		}
-		
-		Teacher(int health, int attack) {
-			super(health, attack);
-		}
-		
-		@Override
-		public void attack(IZombie zombie){
-			zombie.decreaseHealth(attack);
-		}
+public class Teacher extends Character implements ICharacter{
+
+	public static int Health = 50;
+	public static int Attack = 5;
+	
+	Teacher(int Health){
+		this.Health = Health;
 	}
+	
+	
+	@Override
+	public void decreaseHealth(int increment){
+		Health-=increment;
+	}
+	
+	public void attack(IZombie character){
+		character.health -= Attack;
+	}
+	
+	
+	public boolean isAlive(){
+		return (Health > 0);
+	}
+	
+}
